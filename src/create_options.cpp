@@ -24,7 +24,7 @@ namespace mqtt {
 const MQTTAsync_createOptions create_options::DFLT_C_STRUCT =
 			MQTTAsync_createOptions_initializer;
 
-
+create_options::create_options() : opts_(DFLT_C_STRUCT) {}
 create_options::create_options(int mqttVersion) : create_options()
 {
 	opts_.MQTTVersion = mqttVersion;
